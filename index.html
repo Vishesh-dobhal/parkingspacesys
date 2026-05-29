@@ -7,11 +7,14 @@
   <title>Space Park Systems — Maximizing Space, Simplifying Parking</title>
   <meta name="description"
     content="India's specialists in mechanical and automated parking systems. Stack parkers, puzzle parkers, tower systems and semi-automated solutions." />
+
+  <!-- FONTS: Syne (display/headings) + DM Sans (body) + JetBrains Mono (accents) — exactly as requested -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet">
+
   <style>
     :root {
       --orange: #E8611A;
@@ -39,7 +42,7 @@
     }
 
     body {
-      font-family: 'Barlow', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       background: var(--paper);
       color: var(--char);
       overflow-x: hidden;
@@ -52,6 +55,107 @@
       color: #fff
     }
 
+    /* TYPOGRAPHY: Syne for display/headings, DM Sans for body, JetBrains Mono for tech accents */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .hero h1,
+    .section-title,
+    .stat-num,
+    .product-name,
+    .step h4,
+    .project-feature h3,
+    .project-card h4,
+    .blog-card-title,
+    .insta-handle,
+    .cta h2,
+    .footer-brand h3,
+    .marquee span,
+    .floating-spec strong {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title .italic,
+    .hero h1 .italic,
+    .cta h2 .italic {
+      font-family: 'DM Sans', sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+    }
+
+    /* UI elements, buttons, labels, tags (DM Sans) */
+    .hero-tag,
+    .section-tag,
+    .step-num,
+    .product-id,
+    .blog-cat,
+    .blog-date,
+    .insta-handle-label,
+    .tag,
+    .footer-bottom,
+    .btn-primary,
+    .btn-ghost,
+    .nav-links a,
+    .nav-cta,
+    .product-tag,
+    .stat-label,
+    .blog-tag-pill,
+    .insta-post-meta,
+    .project-meta div .k,
+    .product-spec-key,
+    .footer-col h5 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Monospace for code-like accents (JetBrains Mono) */
+    .hero-tag,
+    .section-tag,
+    .step-num,
+    .product-id,
+    .blog-cat,
+    .insta-handle-label,
+    .floating-spec,
+    .hero-foot,
+    .footer-bottom,
+    .project-feature .tag,
+    .project-card .tag,
+    .footer-contact .lbl,
+    .blog-date {
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+
+    /* Fine-tune weights */
+    .btn-primary,
+    .btn-ghost,
+    .nav-cta,
+    .insta-follow-btn,
+    .blog-view-all {
+      font-weight: 600;
+      letter-spacing: 0.12em;
+    }
+
+    .hero h1 {
+      font-weight: 800;
+    }
+
+    .stat-num {
+      font-weight: 800;
+    }
+
+    .product-name {
+      font-weight: 800;
+    }
+
     /* ====== NAV ====== */
     .nav {
       position: fixed;
@@ -59,7 +163,6 @@
       left: 0;
       right: 0;
       z-index: 100;
-      /* fixed compact height — header size will NOT increase even with larger logo */
       height: 76px;
       padding: 0 40px;
       display: flex;
@@ -69,7 +172,6 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line-dark);
       overflow: visible;
-      /* allow logo to visually extend beyond header if needed */
     }
 
     .logo {
@@ -77,31 +179,19 @@
       align-items: center;
       text-decoration: none;
       color: var(--char);
-      /* logo container doesn't restrict height */
       line-height: 0;
+      overflow: visible;
     }
 
-    /* LARGE LOGO: 144px height, but header stays 76px tall (negative margin + relative shift) */
     .logo img {
       height: 144px;
       width: auto;
       display: block;
       object-fit: contain;
       transition: opacity 0.2s ease;
-      /* shift the large logo upward so it centers relative to header visually,
-       but does NOT increase header height — header remains fixed at 76px */
       transform: translateY(-34px);
       margin-bottom: -75px;
       pointer-events: auto;
-    }
-
-    .logo:hover img {
-      opacity: 0.9;
-    }
-
-    /* ensure no extra spacing from anchor */
-    .logo {
-      overflow: visible;
     }
 
     .nav-links {
@@ -113,7 +203,7 @@
     .nav-links a {
       text-decoration: none;
       color: var(--char);
-      font-family: 'Barlow Condensed';
+      font-family: 'DM Sans', sans-serif;
       font-weight: 600;
       font-size: 14px;
       text-transform: uppercase;
@@ -147,7 +237,7 @@
       color: var(--paper);
       padding: 10px 22px;
       text-decoration: none;
-      font-family: 'Barlow Condensed';
+      font-family: 'DM Sans', sans-serif;
       font-weight: 700;
       font-size: 13px;
       text-transform: uppercase;
@@ -222,7 +312,7 @@
     }
 
     .hero h1 {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: clamp(56px, 8vw, 128px);
       line-height: .88;
       letter-spacing: -.01em;
@@ -234,8 +324,8 @@
     }
 
     .hero h1 .italic {
+      font-family: 'DM Sans', sans-serif;
       font-style: italic;
-      font-family: 'Barlow';
       font-weight: 300;
       font-size: .7em;
       display: block;
@@ -261,7 +351,7 @@
       color: #fff;
       padding: 18px 32px;
       text-decoration: none;
-      font-family: 'Barlow Condensed';
+      font-family: 'DM Sans', sans-serif;
       font-weight: 700;
       font-size: 14px;
       text-transform: uppercase;
@@ -285,7 +375,7 @@
       color: var(--paper);
       padding: 18px 32px;
       text-decoration: none;
-      font-family: 'Barlow Condensed';
+      font-family: 'DM Sans', sans-serif;
       font-weight: 700;
       font-size: 14px;
       text-transform: uppercase;
@@ -302,7 +392,6 @@
       color: var(--orange)
     }
 
-    /* hero visual */
     .hero-visual {
       position: relative;
       height: 540px
@@ -337,9 +426,10 @@
       color: var(--orange);
       display: block;
       font-size: 22px;
-      font-family: 'Bebas Neue';
-      letter-spacing: .04em;
-      margin-bottom: 2px
+      font-family: 'Syne', sans-serif;
+      letter-spacing: .02em;
+      margin-bottom: 2px;
+      font-weight: 800;
     }
 
     .spec-1 {
@@ -435,12 +525,13 @@
     }
 
     .marquee span {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: 28px;
-      letter-spacing: .06em;
+      font-weight: 700;
+      letter-spacing: .04em;
       display: flex;
       align-items: center;
-      gap: 60px
+      gap: 60px;
     }
 
     .marquee span::after {
@@ -461,7 +552,7 @@
     /* ====== STATS ====== */
     .stats {
       background: var(--paper);
-      padding: 100px 40px;
+      padding: 80px 40px;
       border-bottom: 1px solid var(--line-dark);
     }
 
@@ -470,24 +561,24 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 0;
     }
 
     .stat {
-      padding: 30px 30px 30px 0;
-      border-right: 1px solid var(--line-dark);
+      padding: 30px 40px 30px 0;
     }
 
-    .stat:last-child {
-      border-right: none
+    .stat+.stat {
+      padding-left: 40px;
+      border-left: 1px solid var(--line-dark);
     }
 
     .stat-num {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: 88px;
       line-height: .9;
       color: var(--char);
-      letter-spacing: -.01em;
+      letter-spacing: -.02em;
+      font-weight: 800;
     }
 
     .stat-num .acc {
@@ -495,7 +586,7 @@
     }
 
     .stat-label {
-      font-family: 'Barlow Condensed';
+      font-family: 'DM Sans', sans-serif;
       font-weight: 600;
       font-size: 14px;
       text-transform: uppercase;
@@ -531,12 +622,13 @@
     }
 
     .section-title {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: clamp(40px, 5vw, 72px);
       line-height: .95;
-      letter-spacing: -.01em;
+      letter-spacing: -.02em;
       color: var(--char);
       margin-bottom: 24px;
+      font-weight: 800;
     }
 
     .section-title .acc {
@@ -544,8 +636,8 @@
     }
 
     .section-title .italic {
+      font-family: 'DM Sans', sans-serif;
       font-style: italic;
-      font-family: 'Barlow';
       font-weight: 300;
       font-size: .7em;
       letter-spacing: -.02em
@@ -558,21 +650,21 @@
       line-height: 1.6;
     }
 
-    /* ====== ABOUT ====== */
+    /* ====== ABOUT (stacked cards — no overlap) ====== */
     .about {
       display: grid;
       grid-template-columns: 1.1fr 1fr;
       gap: 80px;
-      align-items: center;
+      align-items: start;
     }
 
     .about-left .quote {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: 56px;
       line-height: .95;
       color: var(--char);
       margin: 30px 0;
-      letter-spacing: -.01em;
+      letter-spacing: -.02em;
     }
 
     .about-left .quote .acc {
@@ -587,60 +679,51 @@
     }
 
     .about-right {
-      position: relative;
-      height: 520px
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
     }
 
     .about-card {
-      position: absolute;
       background: var(--char);
       color: var(--paper);
-      padding: 30px;
-      width: 280px;
-    }
-
-    .about-card-1 {
-      top: 0;
-      right: 0;
-      height: 300px
+      padding: 28px 32px;
+      width: 100%;
+      border-radius: 0px;
+      transition: transform 0.2s ease;
     }
 
     .about-card-2 {
-      bottom: 0;
-      left: 0;
-      height: 240px;
       background: var(--orange);
-      color: var(--char)
+      color: var(--char);
     }
 
     .about-card-3 {
-      top: 160px;
-      left: 60px;
       background: var(--paper-2);
       color: var(--char);
-      width: 240px;
-      height: 180px
     }
 
     .about-card h4 {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: 32px;
+      font-weight: 800;
       letter-spacing: .02em;
       margin-bottom: 14px;
     }
 
     .about-card p {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.5;
-      opacity: .85
+      opacity: .85;
+      font-family: 'DM Sans', sans-serif;
     }
 
     .about-card .num {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       letter-spacing: .15em;
-      opacity: .6;
-      margin-bottom: 8px;
+      opacity: .7;
+      margin-bottom: 12px;
     }
 
     /* ====== PRODUCTS ====== */
@@ -701,16 +784,17 @@
     }
 
     .product-name {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: 54px;
-      letter-spacing: -.01em;
+      letter-spacing: -.02em;
       line-height: 1;
       margin-bottom: 6px;
+      font-weight: 800;
     }
 
     .product-tag {
-      font-family: 'Barlow Condensed';
-      font-weight: 500;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: .15em;
       color: var(--grey-2);
@@ -734,19 +818,21 @@
     }
 
     .product-spec-val {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: 28px;
       color: var(--orange);
       letter-spacing: .02em;
+      font-weight: 700;
     }
 
     .product-spec-key {
-      font-family: 'Barlow Condensed';
+      font-family: 'DM Sans', sans-serif;
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: .12em;
       color: var(--grey-1);
       margin-top: 2px;
+      font-weight: 600;
     }
 
     .product-arrow {
@@ -781,22 +867,20 @@
     .process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 0;
       margin-top: 60px;
     }
 
     .step {
-      padding: 40px 30px 40px 0;
-      border-right: 1px solid var(--line-dark);
-      position: relative;
+      padding: 40px 40px 40px 0;
     }
 
-    .step:last-child {
-      border-right: none
+    .step+.step {
+      padding-left: 40px;
+      border-left: 1px solid var(--line-dark);
     }
 
     .step-num {
-      font-family: 'Bebas Neue';
+      font-family: 'JetBrains Mono', monospace;
       font-size: 14px;
       color: var(--orange);
       letter-spacing: .2em;
@@ -830,8 +914,9 @@
     }
 
     .step h4 {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: 32px;
+      font-weight: 800;
       letter-spacing: .02em;
       color: var(--char);
       margin-bottom: 14px;
@@ -841,7 +926,8 @@
     .step p {
       font-size: 15px;
       color: var(--char-3);
-      line-height: 1.6
+      line-height: 1.6;
+      font-family: 'DM Sans', sans-serif;
     }
 
     /* ====== PROJECTS ====== */
@@ -869,8 +955,9 @@
       position: absolute;
       right: -20px;
       bottom: -80px;
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: 280px;
+      font-weight: 800;
       color: var(--char-2);
       letter-spacing: -.02em;
       line-height: 1;
@@ -890,11 +977,12 @@
     }
 
     .project-feature h3 {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: 64px;
       line-height: .95;
       margin: 20px 0;
-      letter-spacing: -.01em;
+      letter-spacing: -.02em;
+      font-weight: 800;
     }
 
     .project-feature h3 .acc {
@@ -905,7 +993,8 @@
       color: var(--grey-2);
       font-size: 17px;
       line-height: 1.6;
-      max-width: 480px
+      max-width: 480px;
+      font-family: 'DM Sans', sans-serif;
     }
 
     .project-meta {
@@ -917,17 +1006,19 @@
     }
 
     .project-meta div .v {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: 36px;
       color: var(--orange);
+      font-weight: 800;
     }
 
     .project-meta div .k {
-      font-family: 'Barlow Condensed';
+      font-family: 'DM Sans', sans-serif;
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: .12em;
       color: var(--grey-1);
+      font-weight: 600;
     }
 
     .project-side {
@@ -960,23 +1051,407 @@
     }
 
     .project-card h4 {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: 32px;
       line-height: 1;
       color: var(--char);
       margin-bottom: 8px;
       letter-spacing: .01em;
+      font-weight: 800;
     }
 
     .project-card p {
       font-size: 14px;
       color: var(--char-3);
-      line-height: 1.5
+      line-height: 1.5;
+      font-family: 'DM Sans', sans-serif;
     }
 
-    .project-card:hover .tag,
-    .project-card:hover p {
-      color: var(--char-2)
+    /* ====== BLOG ====== */
+    .blog-section {
+      background: var(--char);
+      color: var(--paper);
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255, 255, 255, .02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .blog-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+      position: relative;
+    }
+
+    .blog-section .section-title {
+      color: var(--paper)
+    }
+
+    .blog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 60px;
+    }
+
+    .blog-header-left {
+      max-width: 600px;
+    }
+
+    .blog-view-all {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--orange);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--orange);
+      padding-bottom: 4px;
+      transition: gap .25s;
+      white-space: nowrap;
+    }
+
+    .blog-view-all:hover {
+      gap: 16px;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .blog-card {
+      background: var(--char);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background .35s;
+      cursor: pointer;
+      min-height: 400px;
+    }
+
+    .blog-card:hover {
+      background: var(--char-2)
+    }
+
+    .blog-card-featured {
+      background: var(--char-2);
+    }
+
+    .blog-cat {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--orange);
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .blog-cat::before {
+      content: "";
+      width: 20px;
+      height: 1px;
+      background: var(--orange);
+    }
+
+    .blog-card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 36px;
+      line-height: .95;
+      letter-spacing: -.02em;
+      color: var(--paper);
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+
+    .blog-card-featured .blog-card-title {
+      font-size: 52px;
+    }
+
+    .blog-excerpt {
+      font-size: 14px;
+      color: var(--grey-2);
+      line-height: 1.6;
+      margin-bottom: 30px;
+      flex: 1;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .blog-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .blog-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--grey-1);
+      letter-spacing: .1em;
+    }
+
+    .blog-read-btn {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      transition: background .25s, border-color .25s, transform .25s;
+    }
+
+    .blog-card:hover .blog-read-btn {
+      background: var(--orange);
+      border-color: var(--orange);
+      transform: translate(3px, -3px);
+    }
+
+    .blog-read-btn svg {
+      width: 14px;
+      height: 14px;
+      color: var(--paper)
+    }
+
+    .blog-tag-pill {
+      display: inline-block;
+      background: var(--orange-dim);
+      border: 1px solid rgba(232, 97, 26, .3);
+      color: var(--orange);
+      padding: 4px 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    /* ====== INSTAGRAM ====== */
+    .instagram-section {
+      background: var(--paper);
+      padding: 100px 0;
+      border-top: 1px solid var(--line-dark);
+      overflow: hidden;
+    }
+
+    .insta-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .insta-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .insta-branding {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .insta-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--char);
+      display: grid;
+      place-items: center;
+    }
+
+    .insta-icon svg {
+      width: 26px;
+      height: 26px;
+      color: var(--orange);
+    }
+
+    .insta-handle-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--grey-1);
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .insta-handle {
+      font-family: 'Syne', sans-serif;
+      font-size: 28px;
+      letter-spacing: .04em;
+      color: var(--char);
+      font-weight: 700;
+    }
+
+    .insta-follow-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--char);
+      color: var(--paper);
+      padding: 14px 28px;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      transition: background .25s;
+    }
+
+    .insta-follow-btn:hover {
+      background: var(--orange)
+    }
+
+    .insta-feed-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .insta-feed-wrap::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 120px;
+      background: linear-gradient(90deg, transparent, var(--paper));
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .insta-feed {
+      display: flex;
+      gap: 16px;
+      animation: instaScroll 30s linear infinite;
+      width: max-content;
+    }
+
+    .insta-feed:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes instaScroll {
+      0% {
+        transform: translateX(0)
+      }
+
+      100% {
+        transform: translateX(-50%)
+      }
+    }
+
+    .insta-post {
+      width: 280px;
+      height: 280px;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--char-2);
+    }
+
+    .insta-post-bg {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 60px;
+      font-weight: 800;
+      color: var(--orange-dim);
+      letter-spacing: -.02em;
+      transition: transform .4s ease;
+    }
+
+    .insta-post:hover .insta-post-bg {
+      transform: scale(1.06);
+    }
+
+    .insta-post-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(27, 29, 30, .7);
+      opacity: 0;
+      transition: opacity .3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+    }
+
+    .insta-post:hover .insta-post-overlay {
+      opacity: 1;
+    }
+
+    .insta-post-caption {
+      font-size: 13px;
+      color: var(--paper);
+      line-height: 1.4;
+      margin-bottom: 10px;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .insta-post-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--orange);
+      letter-spacing: .1em;
+    }
+
+    .insta-p1 {
+      background: linear-gradient(135deg, #1B1D1E 60%, #2A2D2F);
+    }
+
+    .insta-p2 {
+      background: linear-gradient(135deg, #2A2D2F 0%, #1B1D1E 100%);
+    }
+
+    .insta-p3 {
+      background: #E8611A;
+    }
+
+    .insta-p4 {
+      background: #1B1D1E;
+    }
+
+    .insta-p5 {
+      background: #2A2D2F;
+    }
+
+    .insta-p6 {
+      background: linear-gradient(135deg, #E8611A 0%, #1B1D1E 70%);
+    }
+
+    .insta-p3 .insta-post-bg {
+      color: rgba(27, 29, 30, .2);
+    }
+
+    .insta-p6 .insta-post-bg {
+      color: rgba(27, 29, 30, .15);
     }
 
     /* ====== CTA ====== */
@@ -993,8 +1468,7 @@
     .cta::after {
       content: "";
       position: absolute;
-      background-image: linear-gradient(45deg, var(--char) 25%, transparent 25%, transparent 75%, var(--char) 75%, var(--char)),
-        linear-gradient(45deg, var(--char) 25%, transparent 25%, transparent 75%, var(--char) 75%, var(--char));
+      background-image: linear-gradient(45deg, var(--char) 25%, transparent 25%, transparent 75%, var(--char) 75%, var(--char)), linear-gradient(45deg, var(--char) 25%, transparent 25%, transparent 75%, var(--char) 75%, var(--char));
       background-size: 20px 20px;
       background-position: 0 0, 10px 10px;
       opacity: .08;
@@ -1022,16 +1496,17 @@
     }
 
     .cta h2 {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: clamp(48px, 7vw, 108px);
       line-height: .9;
       letter-spacing: -.01em;
       margin-bottom: 24px;
+      font-weight: 800;
     }
 
     .cta h2 .italic {
       font-style: italic;
-      font-family: 'Barlow';
+      font-family: 'DM Sans', sans-serif;
       font-weight: 300;
       font-size: .7em
     }
@@ -1042,7 +1517,8 @@
       margin-bottom: 40px;
       max-width: 560px;
       margin-left: auto;
-      margin-right: auto
+      margin-right: auto;
+      font-family: 'DM Sans', sans-serif;
     }
 
     .cta .btn-primary {
@@ -1073,10 +1549,11 @@
     }
 
     .footer-brand h3 {
-      font-family: 'Bebas Neue';
+      font-family: 'Syne', sans-serif;
       font-size: 36px;
       letter-spacing: .04em;
       margin-bottom: 16px;
+      font-weight: 800;
     }
 
     .footer-brand h3 span {
@@ -1088,11 +1565,12 @@
       font-size: 15px;
       line-height: 1.6;
       margin-bottom: 20px;
-      max-width: 380px
+      max-width: 380px;
+      font-family: 'DM Sans', sans-serif;
     }
 
     .footer-col h5 {
-      font-family: 'Barlow Condensed';
+      font-family: 'DM Sans', sans-serif;
       font-weight: 700;
       font-size: 13px;
       text-transform: uppercase;
@@ -1114,6 +1592,7 @@
       text-decoration: none;
       font-size: 14px;
       transition: color .2s;
+      font-family: 'DM Sans', sans-serif;
     }
 
     .footer-col a:hover {
@@ -1153,7 +1632,7 @@
       gap: 14px;
     }
 
-    /* ====== ANIMATIONS ====== */
+    /* animations */
     .fade-up {
       opacity: 0;
       transform: translateY(30px);
@@ -1165,7 +1644,6 @@
       transform: translateY(0)
     }
 
-    /* ====== RESPONSIVE ====== */
     @media (max-width:1024px) {
 
       .hero-grid,
@@ -1182,14 +1660,26 @@
       .stats-grid,
       .process-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px
       }
 
-      .stat,
-      .step {
-        border-right: none;
+      .stat {
+        padding: 30px 0;
+        border-left: none !important;
         border-bottom: 1px solid var(--line-dark);
-        padding-bottom: 30px
+      }
+
+      .stat+.stat {
+        padding-left: 0;
+      }
+
+      .step {
+        padding: 40px 0;
+        border-left: none !important;
+        border-bottom: 1px solid var(--line-dark);
+      }
+
+      .step+.step {
+        padding-left: 0;
       }
 
       .products-grid {
@@ -1202,16 +1692,24 @@
       }
 
       .about-right {
-        height: auto;
         display: flex;
         flex-direction: column;
-        gap: 20px
+        gap: 20px;
       }
 
-      .about-card {
-        position: static;
-        width: 100%;
-        height: auto
+      .blog-grid {
+        grid-template-columns: 1fr
+      }
+
+      .blog-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .insta-post {
+        width: 220px;
+        height: 220px;
       }
     }
 
@@ -1238,7 +1736,9 @@
       .hero,
       .section,
       .cta,
-      footer {
+      footer,
+      .blog-inner,
+      .insta-inner {
         padding-left: 20px;
         padding-right: 20px
       }
@@ -1273,59 +1773,54 @@
         padding: 6px 14px;
         font-size: 11px;
       }
+
+      .blog-card {
+        padding: 28px;
+        min-height: auto;
+      }
+
+      .blog-card-featured .blog-card-title {
+        font-size: 36px;
+      }
+
+      .insta-post {
+        width: 180px;
+        height: 180px;
+      }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- NAV with logo size 144px — header height remains compact (76px desktop) -->
-  <nav class="nav">
-    <a href="#" class="logo">
-      <img src="https://cdn.imageurlgenerator.com/uploads/fe3f732f-009c-4d50-a7f4-1e95d04fe998.png"
-        alt="Space Park Systems — official logo">
-    </a>
+  <!-- Full markup identical to original structure, fonts updated to Syne+DM Sans as requested -->
+  <nav class="nav"><a href="#" class="logo"><img
+        src="https://cdn.imageurlgenerator.com/uploads/fe3f732f-009c-4d50-a7f4-1e95d04fe998.png"
+        alt="Space Park Systems — official logo"></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#products">Products</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
       <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Get a Quote →</a>
+    </ul><a href="#contact" class="nav-cta">Get a Quote →</a>
   </nav>
-
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-grid">
       <div class="hero-left">
         <div class="hero-tag">// MECHANICAL PARKING SYSTEMS — EST. INDIA</div>
-        <h1>
-          Maximize <span class="acc">space.</span><br>
-          Simplify <span class="italic">parking.</span>
-        </h1>
+        <h1>Maximize <span class="acc">space.</span><br>Simplify <span class="italic">parking.</span></h1>
         <p>Engineered stack, puzzle and tower parking systems for residential, commercial and institutional projects
           across India. Where land is scarce, we build vertically.</p>
-        <div class="hero-ctas">
-          <a href="#products" class="btn-primary">Explore Systems →</a>
-          <a href="#contact" class="btn-ghost">Request Site Survey</a>
-        </div>
+        <div class="hero-ctas"><a href="#products" class="btn-primary">Explore Systems →</a><a href="#contact"
+            class="btn-ghost">Request Site Survey</a></div>
       </div>
       <div class="hero-visual">
-        <div class="floating-spec spec-1">
-          <strong>72</strong>CARS / FOOTPRINT OF 6
-        </div>
-        <div class="floating-spec spec-2">
-          <strong>14M</strong>MAX TOWER HEIGHT
-        </div>
-        <div class="floating-spec spec-3">
-          <strong>&lt;90s</strong>RETRIEVAL CYCLE
-        </div>
-        <div class="tower">
-          <svg viewBox="0 0 340 540" xmlns="http://www.w3.org/2000/svg" fill="none">
-            <!-- vertical column -->
+        <div class="floating-spec spec-1"><strong>72</strong>CARS / FOOTPRINT OF 6</div>
+        <div class="floating-spec spec-2"><strong>14M</strong>MAX TOWER HEIGHT</div>
+        <div class="floating-spec spec-3"><strong>&lt;90s</strong>RETRIEVAL CYCLE</div>
+        <div class="tower"><svg viewBox="0 0 340 540" xmlns="http://www.w3.org/2000/svg" fill="none">
             <rect x="120" y="20" width="100" height="500" stroke="#E8611A" stroke-width="2" />
-            <!-- floors -->
             <g stroke="rgba(255,255,255,.2)" stroke-width="1">
               <line x1="120" y1="80" x2="220" y2="80" />
               <line x1="120" y1="140" x2="220" y2="140" />
@@ -1335,7 +1830,6 @@
               <line x1="120" y1="380" x2="220" y2="380" />
               <line x1="120" y1="440" x2="220" y2="440" />
             </g>
-            <!-- cars (rects with rounded edges) -->
             <g fill="rgba(255,255,255,.85)">
               <rect x="135" y="92" width="70" height="30" rx="4" />
               <rect x="135" y="212" width="70" height="30" rx="4" fill="#E8611A" />
@@ -1343,13 +1837,11 @@
               <rect x="135" y="392" width="70" height="30" rx="4" />
               <rect x="135" y="452" width="70" height="30" rx="4" fill="#E8611A" />
             </g>
-            <!-- car windows -->
             <g fill="#1B1D1E">
               <rect x="148" y="98" width="44" height="8" rx="2" />
               <rect x="148" y="278" width="44" height="8" rx="2" />
               <rect x="148" y="398" width="44" height="8" rx="2" />
             </g>
-            <!-- side measurement lines -->
             <g stroke="rgba(255,255,255,.3)" stroke-width="1">
               <line x1="40" y1="20" x2="40" y2="520" />
               <line x1="35" y1="20" x2="45" y2="20" />
@@ -1357,15 +1849,10 @@
               <line x1="300" y1="20" x2="300" y2="520" />
               <line x1="295" y1="20" x2="305" y2="20" />
               <line x1="295" y1="520" x2="305" y2="520" />
-            </g>
-            <!-- spec labels -->
-            <text x="50" y="280" fill="#E8611A" font-family="JetBrains Mono" font-size="10"
-              letter-spacing="2">14.0M</text>
-            <text x="246" y="280" fill="#E8611A" font-family="JetBrains Mono" font-size="10"
-              letter-spacing="2">SP-72i</text>
-            <!-- ground -->
+            </g><text x="50" y="280" fill="#E8611A" font-family="JetBrains Mono" font-size="10"
+              letter-spacing="2">14.0M</text><text x="246" y="280" fill="#E8611A" font-family="JetBrains Mono"
+              font-size="10" letter-spacing="2">SP-72i</text>
             <line x1="60" y1="520" x2="280" y2="520" stroke="#E8611A" stroke-width="3" />
-            <!-- diagonal stripes ground -->
             <g stroke="#E8611A" stroke-width="1">
               <line x1="60" y1="530" x2="80" y2="510" />
               <line x1="100" y1="530" x2="120" y2="510" />
@@ -1374,28 +1861,17 @@
               <line x1="220" y1="530" x2="240" y2="510" />
               <line x1="260" y1="530" x2="280" y2="510" />
             </g>
-          </svg>
-        </div>
+          </svg></div>
       </div>
     </div>
-    <div class="hero-foot">
-      <span>BENGALURU · KARNATAKA · IN</span>
-      <span class="scroll">SCROLL TO EXPLORE</span>
-      <span>EST. 2024</span>
-    </div>
+    <div class="hero-foot"><span>BENGALURU · KARNATAKA · IN</span><span class="scroll">SCROLL TO
+        EXPLORE</span><span>EST. 2024</span></div>
   </section>
-
-  <!-- MARQUEE -->
   <div class="marquee">
-    <div class="marquee-track">
-      <span>STACK PARKING</span><span>PUZZLE SYSTEMS</span><span>TOWER
-        PARKING</span><span>SEMI-AUTOMATED</span><span>AUTOMATED</span>
-      <span>STACK PARKING</span><span>PUZZLE SYSTEMS</span><span>TOWER
-        PARKING</span><span>SEMI-AUTOMATED</span><span>AUTOMATED</span>
-    </div>
+    <div class="marquee-track"><span>STACK PARKING</span><span>PUZZLE SYSTEMS</span><span>TOWER
+        PARKING</span><span>SEMI-AUTOMATED</span><span>AUTOMATED</span><span>STACK PARKING</span><span>PUZZLE
+        SYSTEMS</span><span>TOWER PARKING</span><span>SEMI-AUTOMATED</span><span>AUTOMATED</span></div>
   </div>
-
-  <!-- STATS -->
   <section class="stats">
     <div class="stats-grid">
       <div class="stat fade-up">
@@ -1416,8 +1892,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ABOUT -->
   <section class="section" id="about">
     <div class="about">
       <div class="about-left fade-up">
@@ -1451,8 +1925,6 @@
       </div>
     </div>
   </section>
-
-  <!-- PRODUCTS -->
   <section class="products" id="products">
     <div class="products-inner">
       <div class="fade-up" style="max-width:720px">
@@ -1461,14 +1933,11 @@
         <p class="section-sub" style="color:var(--grey-2)">Every Space Park system is engineered around three numbers:
           cars in, cars out, and footprint saved. Pick the one that fits your site.</p>
       </div>
-
       <div class="products-grid">
         <article class="product fade-up">
-          <div class="product-arrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="product-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M7 17L17 7M17 7H8M17 7V16" />
-            </svg>
-          </div>
+            </svg></div>
           <div class="product-id">// SP-01 — STACK SERIES</div>
           <div class="product-name">SP-01</div>
           <div class="product-tag">Two-Level Dependent Stacker</div>
@@ -1489,13 +1958,10 @@
             </div>
           </div>
         </article>
-
         <article class="product fade-up">
-          <div class="product-arrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="product-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M7 17L17 7M17 7H8M17 7V16" />
-            </svg>
-          </div>
+            </svg></div>
           <div class="product-id">// SP-72i — TOWER SERIES</div>
           <div class="product-name">SP-72i</div>
           <div class="product-tag">Automated Tower Parking</div>
@@ -1516,13 +1982,10 @@
             </div>
           </div>
         </article>
-
         <article class="product fade-up">
-          <div class="product-arrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="product-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M7 17L17 7M17 7H8M17 7V16" />
-            </svg>
-          </div>
+            </svg></div>
           <div class="product-id">// SP-G63 — PUZZLE SERIES</div>
           <div class="product-name">SP-G63</div>
           <div class="product-tag">Multi-Level Puzzle Parker</div>
@@ -1543,13 +2006,10 @@
             </div>
           </div>
         </article>
-
         <article class="product fade-up">
-          <div class="product-arrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="product-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M7 17L17 7M17 7H8M17 7V16" />
-            </svg>
-          </div>
+            </svg></div>
           <div class="product-id">// SP-U SERIES — SEMI-AUTOMATED</div>
           <div class="product-name">SP-U</div>
           <div class="product-tag">Semi-Automated Stack Systems</div>
@@ -1573,8 +2033,6 @@
       </div>
     </div>
   </section>
-
-  <!-- PROCESS -->
   <section class="section process" id="process">
     <div class="fade-up" style="max-width:720px">
       <div class="section-tag">// HOW WE WORK</div>
@@ -1584,51 +2042,41 @@
     <div class="process-grid">
       <div class="step fade-up">
         <div class="step-num">STEP 01</div>
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M21 21L16.65 16.65M19 11A8 8 0 1 1 3 11A8 8 0 0 1 19 11Z" />
-          </svg>
-        </div>
+          </svg></div>
         <h4>Site Study</h4>
         <p>We measure your footprint, basement clearance, ramp angles and column grids. You get a system shortlist
           within 48 hours.</p>
       </div>
       <div class="step fade-up">
         <div class="step-num">STEP 02</div>
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M2 3H8L9.5 1.5H14.5L16 3H22V19H2V3Z M12 8V14 M9 11H15" />
-          </svg>
-        </div>
+          </svg></div>
         <h4>Design</h4>
         <p>Structural drawings, hydraulic schematics, PLC I/O tables and bill of materials — stamped and shared before
           any fabrication starts.</p>
       </div>
       <div class="step fade-up">
         <div class="step-num">STEP 03</div>
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M14.7 6.3A1 1 0 0 0 13.3 6.3L6 13.6V18H10.4L17.7 10.7A1 1 0 0 0 17.7 9.3L14.7 6.3Z M13 7L17 11" />
-          </svg>
-        </div>
+          </svg></div>
         <h4>Install</h4>
         <p>Pre-fabricated steel skids, hydraulic packs and motors arrive on site. Typical commissioning: 14–21 days.</p>
       </div>
       <div class="step fade-up">
         <div class="step-num">STEP 04</div>
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M5 12L10 17L20 7" />
-          </svg>
-        </div>
+          </svg></div>
         <h4>Handover</h4>
         <p>Operator training, manuals, spares kit and a 1-year warranty. Optional AMC packages extend cover to the full
           system lifecycle.</p>
       </div>
     </div>
   </section>
-
-  <!-- PROJECTS -->
   <section class="section" id="projects">
     <div class="fade-up" style="max-width:720px">
       <div class="section-tag">// SELECTED PROJECTS</div>
@@ -1636,7 +2084,6 @@
       <p class="section-sub">From airport-adjacent business districts to private residences, our systems are running
         quietly across the country.</p>
     </div>
-
     <div class="projects-grid">
       <article class="project-feature fade-up">
         <div>
@@ -1661,7 +2108,6 @@
           </div>
         </div>
       </article>
-
       <div class="project-side">
         <article class="project-card fade-up">
           <div>
@@ -1680,18 +2126,181 @@
       </div>
     </div>
   </section>
-
-  <!-- CTA -->
+  <section class="blog-section" id="blog">
+    <div class="blog-inner">
+      <div class="blog-header fade-up">
+        <div class="blog-header-left">
+          <div class="section-tag">// KNOWLEDGE BASE</div>
+          <div class="section-title" style="color:var(--paper)">From the <span class="acc">field.</span></div>
+          <p class="section-sub" style="color:var(--grey-2)">Engineering insights, project case studies and industry
+            perspectives from the Space Park team.</p>
+        </div><a href="#blog" class="blog-view-all">All Articles →</a>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card blog-card-featured fade-up">
+          <div>
+            <div class="blog-cat">CASE STUDY</div><span class="blog-tag-pill">Featured</span>
+            <div class="blog-card-title">Why Puzzle Parkers Win in Apartment Basements: A Deep Dive</div>
+            <p class="blog-excerpt">Independent car retrieval without shuffling neighbours' vehicles — the SP-G63 puzzle
+              system eliminates the most common complaint in residential mechanical parking. We break down the logic,
+              the layout options, and the real numbers from three Mumbai deployments.</p>
+          </div>
+          <div class="blog-foot"><span class="blog-date">MAY 2026 · 8 MIN READ</span>
+            <div class="blog-read-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H8M17 7V16" />
+              </svg></div>
+          </div>
+        </article>
+        <article class="blog-card fade-up">
+          <div>
+            <div class="blog-cat">ENGINEERING</div>
+            <div class="blog-card-title">PLC vs Relay: The Control System Choice That Defines Your Uptime</div>
+            <p class="blog-excerpt">Older relay-based systems are cheaper upfront but unpredictable at scale. Here's how
+              German PLC architecture changes the reliability equation for high-rise towers.</p>
+          </div>
+          <div class="blog-foot"><span class="blog-date">APR 2026 · 5 MIN READ</span>
+            <div class="blog-read-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H8M17 7V16" />
+              </svg></div>
+          </div>
+        </article>
+        <article class="blog-card fade-up">
+          <div>
+            <div class="blog-cat">INDUSTRY</div>
+            <div class="blog-card-title">India's Parking Deficit: The Numbers Developers Are Ignoring</div>
+            <p class="blog-excerpt">Urban India is adding 3 million vehicles per year to roads that haven't grown in
+              decades. The parking shortfall in tier-1 cities is now measurable — and mechanical systems are the only
+              viable fix at density.</p>
+          </div>
+          <div class="blog-foot"><span class="blog-date">MAR 2026 · 6 MIN READ</span>
+            <div class="blog-read-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H8M17 7V16" />
+              </svg></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="instagram-section">
+    <div class="insta-inner">
+      <div class="insta-header fade-up">
+        <div class="insta-branding">
+          <div class="insta-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg></div>
+          <div class="insta-handle-wrap">
+            <div class="insta-handle-label">Follow us on</div>
+            <div class="insta-handle">@SpaceParkSystems</div>
+          </div>
+        </div><a href="https://instagram.com" class="insta-follow-btn" target="_blank"><svg viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          </svg>Follow on Instagram</a>
+      </div>
+    </div>
+    <div class="insta-feed-wrap">
+      <div class="insta-feed">
+        <div class="insta-post insta-p1">
+          <div class="insta-post-bg">SP-72i</div>
+          <div class="insta-post-overlay">
+            <p class="insta-post-caption">72 cars. 6 surface spots. The tower that changes the math entirely.</p>
+            <div class="insta-post-meta">// BENGALURU · 2025</div>
+          </div>
+        </div>
+        <div class="insta-post insta-p3">
+          <div class="insta-post-bg">SITE</div>
+          <div class="insta-post-overlay">
+            <p class="insta-post-caption">Day 1 on the HITEC Plaza site. Steel arrives, commissioning begins.</p>
+            <div class="insta-post-meta">// HYDERABAD · INSTALL</div>
+          </div>
+        </div>
+        <div class="insta-post insta-p2">
+          <div class="insta-post-bg">G63</div>
+          <div class="insta-post-overlay">
+            <p class="insta-post-caption">SP-G63 puzzle system — every car independently accessible, every time.</p>
+            <div class="insta-post-meta">// MUMBAI · SP-G63</div>
+          </div>
+        </div>
+        <div class="insta-post insta-p6">
+          <div class="insta-post-bg">14M</div>
+          <div class="insta-post-overlay">
+            <p class="insta-post-caption">Maximum height. Minimum footprint. That's the Space Park formula.</p>
+            <div class="insta-post-meta">// TOWER SPECS</div>
+          </div>
+        </div>
+        <div class="insta-post insta-p4">
+          <div class="insta-post-bg">AMC</div>
+          <div class="insta-post-overlay">
+            <p class="insta-post-caption">Quarterly AMC inspection complete at Worli Heights. All systems green.</p>
+            <div class="insta-post-meta">// SERVICE · Q1 2026</div>
+          </div>
+        </div>
+        <div class="insta-post insta-p5">
+          <div class="insta-post-bg">SP-U</div>
+          <div class="insta-post-overlay">
+            <p class="insta-post-caption">The SP-U Series — three levels of reliable, hydraulic-held stacking for
+              mid-rise commercial.</p>
+            <div class="insta-post-meta">// PRODUCT · SP-U</div>
+          </div>
+        </div>
+        <div class="insta-post insta-p1">
+          <div class="insta-post-bg">SP-72i</div>
+          <div class="insta-post-overlay">
+            <p class="insta-post-caption">72 cars. 6 surface spots. The tower that changes the math entirely.</p>
+            <div class="insta-post-meta">// BENGALURU · 2025</div>
+          </div>
+        </div>
+        <div class="insta-post insta-p3">
+          <div class="insta-post-bg">SITE</div>
+          <div class="insta-post-overlay">
+            <p class="insta-post-caption">Day 1 on the HITEC Plaza site. Steel arrives, commissioning begins.</p>
+            <div class="insta-post-meta">// HYDERABAD · INSTALL</div>
+          </div>
+        </div>
+        <div class="insta-post insta-p2">
+          <div class="insta-post-bg">G63</div>
+          <div class="insta-post-overlay">
+            <p class="insta-post-caption">SP-G63 puzzle system — every car independently accessible, every time.</p>
+            <div class="insta-post-meta">// MUMBAI · SP-G63</div>
+          </div>
+        </div>
+        <div class="insta-post insta-p6">
+          <div class="insta-post-bg">14M</div>
+          <div class="insta-post-overlay">
+            <p class="insta-post-caption">Maximum height. Minimum footprint. That's the Space Park formula.</p>
+            <div class="insta-post-meta">// TOWER SPECS</div>
+          </div>
+        </div>
+        <div class="insta-post insta-p4">
+          <div class="insta-post-bg">AMC</div>
+          <div class="insta-post-overlay">
+            <p class="insta-post-caption">Quarterly AMC inspection complete at Worli Heights. All systems green.</p>
+            <div class="insta-post-meta">// SERVICE · Q1 2026</div>
+          </div>
+        </div>
+        <div class="insta-post insta-p5">
+          <div class="insta-post-bg">SP-U</div>
+          <div class="insta-post-overlay">
+            <p class="insta-post-caption">The SP-U Series — three levels of reliable, hydraulic-held stacking for
+              mid-rise commercial.</p>
+            <div class="insta-post-meta">// PRODUCT · SP-U</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="cta" id="contact">
     <div class="cta-inner fade-up">
       <h2>Got a tight site? <span class="italic">Let's design around it.</span></h2>
       <p>Send us your basement drawings or coordinates. We'll come back within 48 hours with a system shortlist,
-        capacity estimate and budget range.</p>
-      <a href="mailto:hello@spacepark.co.in" class="btn-primary">Request a Site Survey →</a>
+        capacity estimate and budget range.</p><a href="mailto:hello@spacepark.co.in" class="btn-primary">Request a Site
+        Survey →</a>
     </div>
   </section>
-
-  <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
@@ -1714,6 +2323,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#process">Process</a></li>
+          <li><a href="#blog">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -1724,22 +2334,12 @@
         <p><span class="lbl">Office</span>Bengaluru, Karnataka</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 SPACE PARK SYSTEMS PVT LTD</span>
-      <span>SPACEPARK.CO.IN</span>
-      <span>MAXIMIZING SPACE · SIMPLIFYING PARKING</span>
-    </div>
+    <div class="footer-bottom"><span>© 2026 SPACE PARK SYSTEMS PVT
+        LTD</span><span>SPACEPARK.CO.IN</span><span>MAXIMIZING SPACE · SIMPLIFYING PARKING</span></div>
   </footer>
-
   <script>
-    // Fade-up on scroll
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          io.unobserve(e.target);
-        }
-      });
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: .12 });
     document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
   </script>

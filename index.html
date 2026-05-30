@@ -8,11 +8,11 @@
   <meta name="description"
     content="India's specialists in mechanical and automated parking systems. Stack parkers, puzzle parkers, tower systems and semi-automated solutions." />
 
-  <!-- FONTS: Syne (display/headings) + DM Sans (body) + JetBrains Mono (accents) — exactly as requested -->
+  <!-- FONTS: Poppins (display/headings/accents) + DM Sans (body/UI) — exactly as requested -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
     rel="stylesheet">
 
   <style>
@@ -55,7 +55,7 @@
       color: #fff
     }
 
-    /* TYPOGRAPHY: Syne for display/headings, DM Sans for body, JetBrains Mono for tech accents */
+    /* TYPOGRAPHY: Poppins for display/headings, DM Sans for body & UI accents */
     h1,
     h2,
     h3,
@@ -73,8 +73,18 @@
     .cta h2,
     .footer-brand h3,
     .marquee span,
-    .floating-spec strong {
-      font-family: 'Syne', sans-serif;
+    .floating-spec strong,
+    .about-card h4,
+    .product-spec-val,
+    .project-meta div .v,
+    .stat-num .acc,
+    .hero h1 .acc,
+    .section-title .acc,
+    .product-name,
+    .blog-card-title,
+    .step h4,
+    .about-left .quote {
+      font-family: 'Poppins', sans-serif;
       font-weight: 700;
       letter-spacing: -0.01em;
     }
@@ -88,7 +98,7 @@
       letter-spacing: -0.02em;
     }
 
-    /* UI elements, buttons, labels, tags (DM Sans) */
+    /* UI elements, buttons, labels, tags, tech accents — all DM Sans (clean, modern) */
     .hero-tag,
     .section-tag,
     .step-num,
@@ -108,39 +118,51 @@
     .insta-post-meta,
     .project-meta div .k,
     .product-spec-key,
-    .footer-col h5 {
+    .footer-col h5,
+    .about-card .num,
+    .hero-foot,
+    .floating-spec,
+    .project-feature .tag,
+    .project-card .tag,
+    .footer-contact .lbl,
+    .step-icon,
+    .insta-follow-btn,
+    .blog-view-all,
+    .blog-read-btn,
+    .product-arrow {
       font-family: 'DM Sans', sans-serif;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    /* Monospace for code-like accents (JetBrains Mono) */
+    /* Monospace touch replaced by DM Sans (tech accent without monospace) */
     .hero-tag,
     .section-tag,
     .step-num,
     .product-id,
     .blog-cat,
     .insta-handle-label,
-    .floating-spec,
     .hero-foot,
     .footer-bottom,
     .project-feature .tag,
     .project-card .tag,
     .footer-contact .lbl,
-    .blog-date {
-      font-family: 'JetBrains Mono', monospace;
-      letter-spacing: 0.06em;
-      font-weight: 500;
+    .blog-date,
+    .about-card .num {
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      text-transform: uppercase;
     }
 
-    /* Fine-tune weights */
+    /* fine-tune weights */
     .btn-primary,
     .btn-ghost,
     .nav-cta,
     .insta-follow-btn,
     .blog-view-all {
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.12em;
     }
 
@@ -296,7 +318,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 12px;
       color: var(--orange);
       letter-spacing: .15em;
@@ -312,7 +334,7 @@
     }
 
     .hero h1 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: clamp(56px, 8vw, 128px);
       line-height: .88;
       letter-spacing: -.01em;
@@ -416,7 +438,7 @@
       border: 1px solid var(--line);
       padding: 14px 18px;
       backdrop-filter: blur(8px);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 11px;
       color: var(--grey-2);
       letter-spacing: .08em;
@@ -426,7 +448,7 @@
       color: var(--orange);
       display: block;
       font-size: 22px;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       letter-spacing: .02em;
       margin-bottom: 2px;
       font-weight: 800;
@@ -473,7 +495,7 @@
       justify-content: space-between;
       align-items: flex-end;
       color: var(--grey-1);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 11px;
       letter-spacing: .1em;
       text-transform: uppercase;
@@ -525,7 +547,7 @@
     }
 
     .marquee span {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 28px;
       font-weight: 700;
       letter-spacing: .04em;
@@ -573,7 +595,7 @@
     }
 
     .stat-num {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 88px;
       line-height: .9;
       color: var(--char);
@@ -603,7 +625,7 @@
     }
 
     .section-tag {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 12px;
       color: var(--orange);
       letter-spacing: .2em;
@@ -622,7 +644,7 @@
     }
 
     .section-title {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: clamp(40px, 5vw, 72px);
       line-height: .95;
       letter-spacing: -.02em;
@@ -650,7 +672,7 @@
       line-height: 1.6;
     }
 
-    /* ====== ABOUT (stacked cards — no overlap) ====== */
+    /* ====== ABOUT ====== */
     .about {
       display: grid;
       grid-template-columns: 1.1fr 1fr;
@@ -659,7 +681,7 @@
     }
 
     .about-left .quote {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 56px;
       line-height: .95;
       color: var(--char);
@@ -704,7 +726,7 @@
     }
 
     .about-card h4 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 32px;
       font-weight: 800;
       letter-spacing: .02em;
@@ -719,7 +741,7 @@
     }
 
     .about-card .num {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 11px;
       letter-spacing: .15em;
       opacity: .7;
@@ -776,7 +798,7 @@
     }
 
     .product-id {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 11px;
       color: var(--orange);
       letter-spacing: .15em;
@@ -784,7 +806,7 @@
     }
 
     .product-name {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 54px;
       letter-spacing: -.02em;
       line-height: 1;
@@ -818,7 +840,7 @@
     }
 
     .product-spec-val {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 28px;
       color: var(--orange);
       letter-spacing: .02em;
@@ -880,7 +902,7 @@
     }
 
     .step-num {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 14px;
       color: var(--orange);
       letter-spacing: .2em;
@@ -914,7 +936,7 @@
     }
 
     .step h4 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 32px;
       font-weight: 800;
       letter-spacing: .02em;
@@ -955,7 +977,7 @@
       position: absolute;
       right: -20px;
       bottom: -80px;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 280px;
       font-weight: 800;
       color: var(--char-2);
@@ -970,14 +992,14 @@
     }
 
     .project-feature .tag {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 11px;
       color: var(--orange);
       letter-spacing: .15em;
     }
 
     .project-feature h3 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 64px;
       line-height: .95;
       margin: 20px 0;
@@ -1006,7 +1028,7 @@
     }
 
     .project-meta div .v {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 36px;
       color: var(--orange);
       font-weight: 800;
@@ -1043,7 +1065,7 @@
     }
 
     .project-card .tag {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 11px;
       letter-spacing: .15em;
       color: var(--char-3);
@@ -1051,7 +1073,7 @@
     }
 
     .project-card h4 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 32px;
       line-height: 1;
       color: var(--char);
@@ -1156,7 +1178,7 @@
     }
 
     .blog-cat {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 11px;
       color: var(--orange);
       letter-spacing: .15em;
@@ -1175,7 +1197,7 @@
     }
 
     .blog-card-title {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 36px;
       line-height: .95;
       letter-spacing: -.02em;
@@ -1206,7 +1228,7 @@
     }
 
     .blog-date {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 11px;
       color: var(--grey-1);
       letter-spacing: .1em;
@@ -1289,7 +1311,7 @@
     }
 
     .insta-handle-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 10px;
       color: var(--grey-1);
       letter-spacing: .15em;
@@ -1298,7 +1320,7 @@
     }
 
     .insta-handle {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 28px;
       letter-spacing: .04em;
       color: var(--char);
@@ -1379,7 +1401,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 60px;
       font-weight: 800;
       color: var(--orange-dim);
@@ -1416,7 +1438,7 @@
     }
 
     .insta-post-meta {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 10px;
       color: var(--orange);
       letter-spacing: .1em;
@@ -1496,7 +1518,7 @@
     }
 
     .cta h2 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: clamp(48px, 7vw, 108px);
       line-height: .9;
       letter-spacing: -.01em;
@@ -1549,7 +1571,7 @@
     }
 
     .footer-brand h3 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 36px;
       letter-spacing: .04em;
       margin-bottom: 16px;
@@ -1607,7 +1629,7 @@
     }
 
     .footer-contact .lbl {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 10px;
       color: var(--orange);
       letter-spacing: .15em;
@@ -1623,7 +1645,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'DM Sans', sans-serif;
       font-size: 11px;
       color: var(--grey-1);
       letter-spacing: .1em;
@@ -1792,7 +1814,6 @@
 </head>
 
 <body>
-  <!-- Full markup identical to original structure, fonts updated to Syne+DM Sans as requested -->
   <nav class="nav"><a href="#" class="logo"><img
         src="https://cdn.imageurlgenerator.com/uploads/fe3f732f-009c-4d50-a7f4-1e95d04fe998.png"
         alt="Space Park Systems — official logo"></a>
@@ -1849,9 +1870,11 @@
               <line x1="300" y1="20" x2="300" y2="520" />
               <line x1="295" y1="20" x2="305" y2="20" />
               <line x1="295" y1="520" x2="305" y2="520" />
-            </g><text x="50" y="280" fill="#E8611A" font-family="JetBrains Mono" font-size="10"
-              letter-spacing="2">14.0M</text><text x="246" y="280" fill="#E8611A" font-family="JetBrains Mono"
-              font-size="10" letter-spacing="2">SP-72i</text>
+            </g>
+            <text x="50" y="280" fill="#E8611A" font-family="DM Sans, sans-serif" font-size="10"
+              letter-spacing="2">14.0M</text>
+            <text x="246" y="280" fill="#E8611A" font-family="DM Sans, sans-serif" font-size="10"
+              letter-spacing="2">SP-72i</text>
             <line x1="60" y1="520" x2="280" y2="520" stroke="#E8611A" stroke-width="3" />
             <g stroke="#E8611A" stroke-width="1">
               <line x1="60" y1="530" x2="80" y2="510" />
